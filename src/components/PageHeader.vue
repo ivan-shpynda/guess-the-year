@@ -1,9 +1,9 @@
 <template>
     <header :class="$style.header">
-        <span :class="$style.author">Автор: Іван Шпинда</span>
+        <span :class="$style.author">Made by Ivan Shpynda</span>
         <div :class="$style.links">
             <a
-                href="https://linkedin.com/in/YOUR_LINKEDIN"
+                href="https://www.linkedin.com/in/ivan-shpynda-3576021a1"
                 target="_blank"
                 rel="noopener noreferrer"
                 :class="$style.link"
@@ -22,7 +22,7 @@
                 </svg>
             </a>
             <a
-                href="https://github.com/YOUR_GITHUB"
+                href="https://github.com/ivan-shpynda"
                 target="_blank"
                 rel="noopener noreferrer"
                 :class="$style.link"
@@ -58,7 +58,7 @@
     font-family: "IBM Plex Mono", "Courier New", monospace;
     font-size: 11px;
     font-weight: 400;
-    color: #9a8f80;
+    color: var(--color-text-brown);
     letter-spacing: 0.05em;
 }
 
@@ -69,13 +69,13 @@
 }
 
 .link {
-    color: #9a8f80;
+    color: var(--color-text-brown);
     display: flex;
     align-items: center;
     transition: color 0.15s;
 }
 
 .link:hover {
-    color: #111111;
+    color: var(--color-text);
 }
 </style>

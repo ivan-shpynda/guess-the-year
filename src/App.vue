@@ -3,9 +3,10 @@ import { ref, computed } from "vue";
 import questionsData from "./data/questions.json";
 import GameHeader from "./components/GameHeader.vue";
 import QuestionCard from "./components/QuestionCard.vue";
-import YearSlider from "./components/YearSlider.vue";
+import AnswerPanel from "./components/AnswerPanel.vue";
 import GameOver from "./components/GameOver.vue";
 import PageHeader from "./components/PageHeader.vue";
+import IntroScreen from "./components/IntroScreen.vue";
 
 const STARTING_LIVES = 100;
 
@@ -30,13 +31,18 @@ const lives = ref(STARTING_LIVES);
 const selectedYear = ref(1963);
 const currentIndex = ref(0);
 const questionNum = ref(1);
+const correctAnswers = ref(0);
 const shuffledQuestions = ref(shuffle(questionsData));
-const phase = ref("playing");
+const phase = ref("intro");
 const lastResult = ref(null);
 
 const currentQuestion = computed(
     () => shuffledQuestions.value[currentIndex.value],
 );
+
+function startGame() {
+    phase.value = "playing";
+}
 
 function confirm() {
     const correct = currentQuestion.value.year;
@@ -44,7 +50,15 @@ function confirm() {
     const diff = Math.abs(guess - correct);
     const livesLost = diff;
     lives.value = Math.max(0, lives.value - livesLost);
-    lastResult.value = { diff, correctYear: correct, guessYear: guess, livesLost };
+    if (diff === 0) {
+        correctAnswers.value++;
+    }
+    lastResult.value = {
+        diff,
+        correctYear: correct,
+        guessYear: guess,
+        livesLost,
+    };
     phase.value = "feedback";
 }
 
@@ -61,7 +75,6 @@ function nextQuestion() {
         currentIndex.value = nextIndex;
     }
     questionNum.value++;
-    selectedYear.value = 1963;
     phase.value = "playing";
     lastResult.value = null;
 }
@@ -71,6 +84,7 @@ function restart() {
     selectedYear.value = 1963;
     currentIndex.value = 0;
     questionNum.value = 1;
+    correctAnswers.value = 0;
     shuffledQuestions.value = shuffle(questionsData);
     phase.value = "playing";
     lastResult.value = null;
@@ -81,81 +95,36 @@ function restart() {
     <div :class="$style.app">
         <PageHeader />
         <div :class="$style.card">
-            <template v-if="phase === 'gameover'">
+            <template v-if="phase === 'intro'">
+                <IntroScreen @start="startGame" />
+            </template>
+
+            <template v-else-if="phase === 'gameover'">
                 <GameOver
                     :questions-answered="questionNum"
+                    :correct-answers="correctAnswers"
                     @restart="restart"
                 />
             </template>
 
             <template v-else>
-                <div
-                    :style="{
-                        marginBottom: phase === 'playing' ? '48px' : '40px',
-                    }"
-                >
-                    <GameHeader
-                        :lives="lives"
-                        :question-num="questionNum"
-                    />
-                </div>
-
-                <div
-                    :style="{
-                        marginBottom: phase === 'playing' ? '52px' : '28px',
-                    }"
-                >
-                    <QuestionCard :question="currentQuestion.text" />
-                </div>
+                <GameHeader :lives="lives" :question-num="questionNum" />
+                <QuestionCard :question="currentQuestion.text" />
+                <AnswerPanel
+                    v-model="selectedYear"
+                    :lives="lives"
+                    :phase="phase"
+                    :correct-year="lastResult?.correctYear ?? null"
+                    :diff="lastResult?.diff ?? null"
+                />
 
                 <template v-if="phase === 'playing'">
-                    <YearSlider v-model="selectedYear" />
                     <button :class="$style.mainBtn" @click="confirm">
                         ПІДТВЕРДИТИ
                     </button>
                 </template>
 
                 <template v-else>
-                    <div :class="$style.detailsCard">
-                        <div
-                            :class="[$style.detailRow, $style.detailRowBorder]"
-                        >
-                            <span :class="$style.detailLabel">Відповідь</span>
-                            <span :class="$style.detailValue">{{
-                                lastResult.guessYear
-                            }}</span>
-                        </div>
-                        <div
-                            :class="[$style.detailRow, $style.detailRowBorder]"
-                        >
-                            <span :class="$style.detailLabel">Правильно</span>
-                            <span
-                                :class="[
-                                    $style.detailValue,
-                                    $style.detailValueCorrect,
-                                ]"
-                                >{{ lastResult.correctYear }}</span
-                            >
-                        </div>
-                        <div :class="$style.detailRow">
-                            <span :class="$style.detailLabel">Відхилення</span>
-                            <span :class="$style.detailValueSmall">{{
-                                lastResult.diff === 0
-                                    ? "0 років"
-                                    : lastResult.diff +
-                                      " " +
-                                      pluralYears(lastResult.diff)
-                            }}</span>
-                        </div>
-                    </div>
-
-                    <div :class="$style.livesBlock">
-                        <span :class="$style.livesBlockLabel"
-                            >Залишок життів</span
-                        >
-                        <span :class="$style.livesBlockValue">{{ lives }}</span>
-                    </div>
-
                     <button :class="$style.mainBtn" @click="nextQuestion">
                         {{ lives <= 0 ? "РЕЗУЛЬТАТИ" : "НАСТУПНЕ ПИТАННЯ" }}
                     </button>
@@ -166,6 +135,33 @@ function restart() {
 </template>
 
 <style>
+:root {
+    --color-text: #111111;
+    --color-text-muted: #aaaaaa;
+    --color-text-faint: #bbbbbb;
+    --color-text-medium: #555555;
+    --color-text-gray: #999999;
+    --color-text-brown: #9a8f80;
+
+    --color-blue: #1e6fe0;
+    --color-blue-light: #dce9ff;
+
+    --color-green: #2fbd6b;
+    --color-green-bg: #e8f5ee;
+
+    --color-yellow: #ffd200;
+    --color-yellow-shadow: #d4a900;
+    --color-yellow-text: #7a5a00;
+
+    --color-white: #ffffff;
+    --color-bg: #f4f4f4;
+    --color-bg-soft: #f6f6f6;
+    --color-shadow: #ececec;
+    --color-divider: #eeeeee;
+    --color-divider-soft: #f0f0f0;
+    --color-overlay: rgba(0, 0, 0, 0.5);
+}
+
 *,
 *::before,
 *::after {
@@ -175,10 +171,10 @@ function restart() {
 }
 
 body {
-    background: #f4f4f4;
+    background: var(--color-bg);
     font-family: "IBM Plex Mono", "Courier New", monospace;
     min-height: 100vh;
-    color: #111111;
+    color: var(--color-text);
 }
 </style>
 
@@ -193,61 +189,19 @@ body {
 }
 
 .card {
-    background: #ffffff;
+    background: var(--color-white);
     border-radius: 28px;
     padding: 44px 34px;
-    box-shadow: 0 10px 0 #ececec;
+    box-shadow: 0 10px 0 var(--color-shadow);
     width: 100%;
     max-width: 380px;
-}
-
-.detailsCard {
-    background: #f6f6f6;
-    border-radius: 20px;
-    padding: 28px 24px;
-    margin-bottom: 16px;
-}
-
-.detailRow {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.detailRowBorder {
-    padding-bottom: 18px;
-    margin-bottom: 18px;
-    border-bottom: 1px solid #e8e8e8;
-}
-
-.detailLabel {
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    color: #aaaaaa;
-    text-transform: uppercase;
-}
-
-.detailValue {
-    font-size: 24px;
-    font-weight: 700;
-    color: #111111;
-}
-
-.detailValueCorrect {
-    color: #2fbd6b;
-}
-
-.detailValueSmall {
-    font-size: 16px;
-    font-weight: 700;
-    color: #111111;
 }
 
 .livesBlock {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #1e6fe0;
+    background: var(--color-blue);
     border-radius: 16px;
     padding: 16px 22px;
     margin-bottom: 20px;
@@ -256,20 +210,20 @@ body {
 .livesBlockLabel {
     font-size: 12px;
     letter-spacing: 1px;
-    color: #dce9ff;
+    color: var(--color-blue-light);
     text-transform: uppercase;
 }
 
 .livesBlockValue {
     font-size: 22px;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--color-white);
 }
 
 .mainBtn {
     width: 100%;
-    background: #ffd200;
-    color: #7a5a00;
+    background: var(--color-yellow);
+    color: var(--color-yellow-text);
     border: none;
     border-radius: 16px;
     padding: 16px;
@@ -279,7 +233,7 @@ body {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     cursor: pointer;
-    box-shadow: 0 5px 0 #d4a900;
+    box-shadow: 0 5px 0 var(--color-yellow-shadow);
     transition: filter 0.1s;
 }
 

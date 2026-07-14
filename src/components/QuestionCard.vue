@@ -14,13 +14,15 @@ defineProps({
 <style module>
 .card {
     width: 100%;
+    margin-bottom: 36px;
+    min-height: 142px;
 }
 
 .label {
     font-size: 11px;
     font-weight: 400;
     letter-spacing: 1.5px;
-    color: #aaaaaa;
+    color: var(--color-text-muted);
     text-transform: uppercase;
     margin-bottom: 14px;
 }
@@ -28,7 +30,7 @@ defineProps({
 .text {
     font-size: 19px;
     font-weight: 400;
-    color: #111111;
+    color: var(--color-text);
     line-height: 1.5;
 }
 </style>
