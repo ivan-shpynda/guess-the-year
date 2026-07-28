@@ -93,11 +93,7 @@ function onNumber(e) {
 }
 
 function pluralYears(n) {
-    if (n % 100 >= 11 && n % 100 <= 19) return "років";
-    const mod = n % 10;
-    if (mod === 1) return "рік";
-    if (mod >= 2 && mod <= 4) return "роки";
-    return "років";
+    return n === 1 ? "year" : "years";
 }
 
 </script>
@@ -108,7 +104,7 @@ function pluralYears(n) {
             <div ref="answerPillEl" :class="$style.pillWrap">
                 <div :class="$style.pill">
                     <label :for="`year-input`" :class="$style.pillLabel"
-                        >Відповідь</label
+                        >Answer</label
                     >
                     <input
                         id="year-input"
@@ -125,7 +121,7 @@ function pluralYears(n) {
 
             <div v-if="phase === 'feedback'" ref="correctPillEl" :class="$style.pillWrap">
                 <div :class="[$style.pill, $style.pillCorrect]">
-                    <span :class="$style.pillLabel">Правильно</span>
+                    <span :class="$style.pillLabel">Correct</span>
                     <span :class="$style.correctYear">{{ correctYear }}</span>
                 </div>
             </div>
@@ -151,14 +147,14 @@ function pluralYears(n) {
             ref="deviationEl"
             :class="$style.deviation"
         >
-            <template v-if="diff === 0">Точно!</template>
+            <template v-if="diff === 0">Exact!</template>
             <template v-else
-                >Відхилення:
+                >Off by:
                 <span :class="$style.deviationNumber">{{ diff }}</span>
                 {{ pluralYears(diff) }}</template
             >
         </div>
-        <div ref="livesTextEl" :class="$style.lives">Життя: {{ lives }}</div>
+        <div ref="livesTextEl" :class="$style.lives">Lives: {{ lives }}</div>
     </div>
 </template>
 

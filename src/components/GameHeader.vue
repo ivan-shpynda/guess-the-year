@@ -50,17 +50,17 @@ watch(
 
 <template>
     <div :class="$style.header">
-        <h1 :class="$style.title">Вгадай рік</h1>
+        <h1 :class="$style.title">Guess the Year</h1>
         <div :class="$style.tiles">
             <div ref="tileBlueEl" :class="$style.tileBlue">
-                <div :class="$style.tileLabel">ЖИТТЯ</div>
+                <div :class="$style.tileLabel">LIVES</div>
                 <div ref="livesEl" :class="$style.tileValue">
                     {{ displayedLives }}
                 </div>
             </div>
             <div ref="tileYellowEl" :class="$style.tileYellow">
                 <div :class="[$style.tileLabel, $style.tileLabelDark]">
-                    ПИТАННЯ
+                    QUESTION
                 </div>
                 <div :class="[$style.tileValue, $style.tileValueDark]">
                     {{ questionNum }}

@@ -9,20 +9,20 @@ defineEmits(["restart"]);
 <template>
     <div :class="$style.screen">
         <div :class="$style.top">
-            <p :class="$style.label">ГРА ЗАВЕРШЕНА</p>
+            <p :class="$style.label">GAME OVER</p>
             <p :class="$style.bigScore">{{ questionsAnswered }}</p>
-            <p :class="$style.sublabel">питань пройдено</p>
+            <p :class="$style.sublabel">questions answered</p>
         </div>
 
         <div :class="$style.top">
             <p :class="$style.bigScore">{{ correctAnswers }}</p>
-            <p :class="$style.sublabel">вгадано правильно</p>
+            <p :class="$style.sublabel">guessed correctly</p>
         </div>
 
         <div :class="$style.divider" />
 
         <button :class="$style.restartBtn" @click="$emit('restart')">
-            ГРАТИ ЗНОВУ
+            PLAY AGAIN
         </button>
     </div>
 </template>

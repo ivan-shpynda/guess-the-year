@@ -5,34 +5,32 @@ defineEmits(["start"]);
 <template>
     <div :class="$style.screen">
         <div :class="$style.top">
-            <p :class="$style.label">Вгадай рік</p>
+            <p :class="$style.label">Guess the Year</p>
             <p :class="$style.text">
-                Перед тобою — історична подія. Твоє завдання — вгадати рік,
-                коли вона відбулася, за допомогою слайдера.
+                You'll be shown a historical event. Your task is to guess the
+                year it happened using the slider.
             </p>
         </div>
 
         <ul :class="$style.rules">
             <li :class="$style.rule">
                 <span :class="$style.ruleIcon">●</span>
-                Чим більше відхилення від правильного року, тим більше життів
-                втрачаєш
+                The further off your guess is from the correct year, the more
+                lives you lose
             </li>
             <li :class="$style.rule">
                 <span :class="$style.ruleIcon">●</span>
-                Гра триває, доки не закінчаться життя
+                The game continues until you run out of lives
             </li>
             <li :class="$style.rule">
                 <span :class="$style.ruleIcon">●</span>
-                Наприкінці побачиш, скільки питань пройшов
+                At the end you'll see how many questions you answered
             </li>
         </ul>
 
         <div :class="$style.divider" />
 
-        <button :class="$style.startBtn" @click="$emit('start')">
-            ПОЧАТИ
-        </button>
+        <button :class="$style.startBtn" @click="$emit('start')">START</button>
     </div>
 </template>
 

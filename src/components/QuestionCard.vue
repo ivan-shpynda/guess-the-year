@@ -6,7 +6,7 @@ defineProps({
 
 <template>
     <div :class="$style.card">
-        <p :class="$style.label">Подія</p>
+        <p :class="$style.label">Event</p>
         <p :class="$style.text">{{ question }}</p>
     </div>
 </template>

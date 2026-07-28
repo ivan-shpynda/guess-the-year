@@ -20,11 +20,7 @@ function shuffle(arr) {
 }
 
 function pluralYears(n) {
-    if (n % 100 >= 11 && n % 100 <= 19) return "років";
-    const mod = n % 10;
-    if (mod === 1) return "рік";
-    if (mod >= 2 && mod <= 4) return "роки";
-    return "років";
+    return n === 1 ? "year" : "years";
 }
 
 const lives = ref(STARTING_LIVES);
@@ -38,6 +34,10 @@ const lastResult = ref(null);
 
 const currentQuestion = computed(
     () => shuffledQuestions.value[currentIndex.value],
+);
+
+const isLastQuestion = computed(
+    () => lives.value <= 0 || currentIndex.value + 1 >= shuffledQuestions.value.length,
 );
 
 function startGame() {
@@ -63,17 +63,11 @@ function confirm() {
 }
 
 function nextQuestion() {
-    if (lives.value <= 0) {
+    if (isLastQuestion.value) {
         phase.value = "gameover";
         return;
     }
-    const nextIndex = currentIndex.value + 1;
-    if (nextIndex >= shuffledQuestions.value.length) {
-        shuffledQuestions.value = shuffle(questionsData);
-        currentIndex.value = 0;
-    } else {
-        currentIndex.value = nextIndex;
-    }
+    currentIndex.value++;
     questionNum.value++;
     phase.value = "playing";
     lastResult.value = null;
@@ -120,13 +114,13 @@ function restart() {
 
                 <template v-if="phase === 'playing'">
                     <button :class="$style.mainBtn" @click="confirm">
-                        ПІДТВЕРДИТИ
+                        CONFIRM
                     </button>
                 </template>
 
                 <template v-else>
                     <button :class="$style.mainBtn" @click="nextQuestion">
-                        {{ lives <= 0 ? "РЕЗУЛЬТАТИ" : "НАСТУПНЕ ПИТАННЯ" }}
+                        {{ isLastQuestion ? "RESULTS" : "NEXT QUESTION" }}
                     </button>
                 </template>
             </template>
@@ -160,6 +154,8 @@ function restart() {
     --color-divider: #eeeeee;
     --color-divider-soft: #f0f0f0;
     --color-overlay: rgba(0, 0, 0, 0.5);
+
+    color-scheme: light;
 }
 
 *,

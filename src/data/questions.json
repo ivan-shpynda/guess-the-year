@@ -1,351 +1,367 @@
 [
     {
         "id": 1,
-        "text": "Соломія Крушельницька рятує оперу Джакомо Пуччіні \"Мадам Баттерфляй\", тріумфально виконавши партію Чіо-Чіо-сан у театрі \"Гранде\" в Брешії",
+        "text": "Solomiya Krushelnytska saves Giacomo Puccini's opera \"Madama Butterfly\" by triumphantly performing the role of Cio-Cio-San at the Teatro Grande in Brescia",
         "year": 1904
     },
     {
         "id": 2,
-        "text": "Микола Садовський заснував у Києві перший стаціонарний український професійний театр",
+        "text": "Mykola Sadovskyi founds the first permanent professional Ukrainian theater in Kyiv",
         "year": 1907
     },
     {
         "id": 3,
-        "text": "Вийшов друком перший том \"Словаря української мови\" за редакцією Бориса Грінченка",
+        "text": "The first volume of the \"Dictionary of the Ukrainian Language,\" edited by Borys Hrinchenko, is published",
         "year": 1907
     },
     {
         "id": 4,
-        "text": "Ігор Сікорський здійснює свій перший успішний політ на власному літаку в Києві",
+        "text": "Igor Sikorsky makes his first successful flight on his own aircraft in Kyiv",
         "year": 1910
     },
     {
         "id": 5,
-        "text": "Заснування скаутської організації \"Пласт\" у Львові",
+        "text": "Founding of the \"Plast\" scouting organization in Lviv",
         "year": 1911
     },
     {
         "id": 6,
-        "text": "Леся Українка написала драму-феєрію \"Лісова пісня\"",
+        "text": "Lesya Ukrainka writes the dramatic fantasy \"The Forest Song\"",
         "year": 1911
     },
     {
         "id": 7,
-        "text": "Урочисте відкриття Київської консерваторії",
+        "text": "Grand opening of the Kyiv Conservatory",
         "year": 1913
     },
     {
         "id": 8,
-        "text": "Київський авіаконструктор Ігор Сікорський створює перший у світі чотиримоторний літак \"Руський витязь\"",
+        "text": "Kyiv aircraft designer Igor Sikorsky creates the world's first four-engine airplane, the \"Russky Vityaz\"",
         "year": 1913
     },
     {
         "id": 9,
-        "text": "Перше виконання \"Щедрика\" Миколи Леонтовича хором Київського університету",
+        "text": "First performance of Mykola Leontovych's \"Shchedryk\" by the Kyiv University choir",
         "year": 1916
     },
     {
         "id": 10,
-        "text": "Утворення Української Центральної Ради в Києві",
+        "text": "Formation of the Ukrainian Central Rada in Kyiv",
         "year": 1917
     },
     {
         "id": 11,
-        "text": "Заснування Української академії мистецтв у Києві",
+        "text": "Founding of the Ukrainian Academy of Arts in Kyiv",
         "year": 1917
     },
-    { "id": 12, "text": "Заснування Української академії наук", "year": 1918 },
     {
-        "id": 13,
-        "text": "Гетьман Павло Скоропадський заснував Кам'янець-Подільський державний український університет",
+        "id": 12,
+        "text": "Founding of the Ukrainian Academy of Sciences",
         "year": 1918
     },
-    { "id": 14, "text": "Підписання Акту злуки УНР та ЗУНР", "year": 1919 },
+    {
+        "id": 13,
+        "text": "Hetman Pavlo Skoropadskyi founds the Kamianets-Podilskyi State Ukrainian University",
+        "year": 1918
+    },
+    {
+        "id": 14,
+        "text": "Signing of the Act of Unification of the UNR and the ZUNR",
+        "year": 1919
+    },
     {
         "id": 15,
-        "text": "Хор Олександра Кошиця вперше виконує \"Щедрика\" за кордоном у Празі",
+        "text": "Oleksandr Koshyts' choir performs \"Shchedryk\" abroad for the first time, in Prague",
         "year": 1919
     },
     {
         "id": 16,
-        "text": "Засновано Одеську кінофабрику (нині Одеська кіностудія) — одну з перших кінофабрик світу",
+        "text": "The Odesa Film Factory (now Odesa Film Studio) is founded, one of the world's first film factories",
         "year": 1919
     },
     {
         "id": 17,
-        "text": "У Відні засновано Український вільний університет",
+        "text": "The Ukrainian Free University is founded in Vienna",
         "year": 1921
     },
     {
         "id": 18,
-        "text": "\"Щедрик\" уперше прозвучав у нью-йоркському Карнегі-хол",
+        "text": "\"Shchedryk\" is performed for the first time at Carnegie Hall in New York",
         "year": 1922
     },
     {
         "id": 19,
-        "text": "Заснування літературного угруповання ВАПЛІТЕ",
+        "text": "Founding of the literary group VAPLITE",
         "year": 1925
     },
     {
         "id": 20,
-        "text": "Театр \"Березіль\" Леся Курбаса переїжджає до Харкова",
+        "text": "Les Kurbas's \"Berezil\" theater moves to Kharkiv",
         "year": 1926
     },
     {
         "id": 21,
-        "text": "Прем'єра фільму Олександра Довженка \"Звенигора\"",
+        "text": "Premiere of Oleksandr Dovzhenko's film \"Zvenyhora\"",
         "year": 1928
     },
     {
         "id": 22,
-        "text": "Урочисте відкриття будівлі Держпром у Харкові",
+        "text": "Grand opening of the Derzhprom building in Kharkiv",
         "year": 1928
     },
     {
         "id": 23,
-        "text": "Прем'єра фільму Олександра Довженка \"Арсенал\"",
+        "text": "Premiere of Oleksandr Dovzhenko's film \"Arsenal\"",
         "year": 1929
     },
     {
         "id": 24,
-        "text": "Прем'єра фільму Олександра Довженка \"Земля\"",
+        "text": "Premiere of Oleksandr Dovzhenko's film \"Earth\"",
         "year": 1930
     },
     {
         "id": 25,
-        "text": "Уперше в СРСР здійснено розщеплення ядра атома літію в Українському фізико-технічному інституті",
+        "text": "For the first time in the USSR, the splitting of a lithium atomic nucleus is achieved at the Ukrainian Institute of Physics and Technology",
         "year": 1932
     },
     {
         "id": 26,
-        "text": "Пуск Дніпровської гідроелектростанції (Дніпрогесу)",
+        "text": "Launch of the Dnieper Hydroelectric Station (Dniprohes)",
         "year": 1932
     },
     {
         "id": 27,
-        "text": "Столицю Української РСР перенесено з Харкова до Києва",
+        "text": "The capital of the Ukrainian SSR is moved from Kharkiv to Kyiv",
         "year": 1934
     },
     {
         "id": 28,
-        "text": "Американський композитор українського походження Пітер Вільговський створив англомовну версію \"Щедрика\" — \"Carol of the Bells\"",
+        "text": "American composer of Ukrainian descent Peter Wilhousky creates the English-language version of \"Shchedryk\" — \"Carol of the Bells\"",
         "year": 1936
     },
     {
         "id": 29,
-        "text": "Україна стає однією з країн-засновниць Організації Об'єднаних Націй",
+        "text": "Ukraine becomes one of the founding countries of the United Nations",
         "year": 1945
     },
     {
         "id": 30,
-        "text": "У Феофанії під Києвом завершено створення МЕСМ — першої в континентальній Європі електронної обчислювальної машини",
+        "text": "In Feofaniya near Kyiv, the creation of MESM — the first electronic computing machine in continental Europe — is completed",
         "year": 1951
     },
     {
         "id": 31,
-        "text": "Відкриття мосту Патона в Києві — першого суцільнозварного мосту у світі",
+        "text": "Opening of the Paton Bridge in Kyiv, the world's first all-welded bridge",
         "year": 1953
     },
     {
         "id": 32,
-        "text": "Кримську область передано до складу Української РСР",
+        "text": "Crimean oblast is transferred to the Ukrainian SSR",
         "year": 1954
     },
     {
         "id": 33,
-        "text": "Уродженець Житомирщини Сергій Корольов очолює запуск першого в світі штучного супутника Землі",
+        "text": "Serhii Korolov, a native of Zhytomyr region, leads the launch of the world's first artificial satellite",
         "year": 1957
     },
     {
         "id": 34,
-        "text": "Відкриття першої лінії Київського метрополітену",
+        "text": "Opening of the first line of the Kyiv Metro",
         "year": 1960
     },
     {
         "id": 35,
-        "text": "Заснування Інституту кібернетики Академії наук УРСР у Києві",
+        "text": "Founding of the Institute of Cybernetics of the Academy of Sciences of the Ukrainian SSR in Kyiv",
         "year": 1962
     },
     {
         "id": 36,
-        "text": "Прем'єра фільму Сергія Параджанова \"Тіні забутих предків\" у київському кінотеатрі \"Україна\"",
+        "text": "Premiere of Sergei Parajanov's film \"Shadows of Forgotten Ancestors\" at the Ukraina cinema in Kyiv",
         "year": 1965
     },
     {
         "id": 37,
-        "text": "Гімнастка Людмила Турищева здобуває олімпійське золото в багатоборстві на Іграх у Мюнхені",
+        "text": "Gymnast Lyudmila Turishcheva wins Olympic gold in the individual all-around at the Munich Games",
         "year": 1972
     },
     {
         "id": 38,
-        "text": "Київське \"Динамо\" під керівництвом Валерія Лобановського виграває Кубок кубків УЄФА",
+        "text": "Dynamo Kyiv, coached by Valeriy Lobanovskyi, wins the UEFA Cup Winners' Cup",
         "year": 1975
     },
     {
         "id": 39,
-        "text": "Опубліковано історичний роман у віршах Ліни Костенко \"Маруся Чурай\"",
+        "text": "Lina Kostenko's historical novel in verse \"Marusia Churai\" is published",
         "year": 1979
     },
     {
         "id": 40,
-        "text": "Київ приймає футбольні матчі XXII літніх Олімпійських ігор",
+        "text": "Kyiv hosts football matches of the XXII Summer Olympic Games",
         "year": 1980
     },
     {
         "id": 41,
-        "text": "Сергій Бубка здобуває олімпійське золото зі стрибків із жердиною на Іграх у Сеулі",
+        "text": "Serhii Bubka wins Olympic gold in pole vault at the Seoul Games",
         "year": 1988
     },
     {
         "id": 42,
-        "text": "В Україні урочисто відзначено 1000-ліття хрещення Київської Русі",
+        "text": "The 1000th anniversary of the Baptism of Kyivan Rus is solemnly celebrated in Ukraine",
         "year": 1988
     },
     {
         "id": 43,
-        "text": "Українській мові надано статус державної в Українській РСР",
+        "text": "The Ukrainian language is granted state language status in the Ukrainian SSR",
         "year": 1989
     },
-    { "id": 44, "text": "Засновано Народний рух України", "year": 1989 },
+    {
+        "id": 44,
+        "text": "The People's Movement of Ukraine (Rukh) is founded",
+        "year": 1989
+    },
     {
         "id": 45,
-        "text": "Прийнято Декларацію про державний суверенітет України",
+        "text": "The Declaration of State Sovereignty of Ukraine is adopted",
         "year": 1990
     },
     {
         "id": 46,
-        "text": "Ухвалено Акт проголошення незалежності України",
+        "text": "The Act of Declaration of Independence of Ukraine is adopted",
         "year": 1991
     },
     {
         "id": 47,
-        "text": "Усеукраїнський референдум підтвердив незалежність держави",
+        "text": "The all-Ukrainian referendum confirms the state's independence",
         "year": 1991
     },
     {
         "id": 48,
-        "text": "В обіг введено український карбованець",
+        "text": "The Ukrainian karbovanets is introduced into circulation",
         "year": 1992
     },
     {
         "id": 49,
-        "text": "Фігурист Віктор Петренко здобуває олімпійське золото на Іграх в Альбервілі",
+        "text": "Figure skater Viktor Petrenko wins Olympic gold at the Albertville Games",
         "year": 1992
     },
     {
         "id": 50,
-        "text": "Підписано Будапештський меморандум про гарантії безпеки Україні",
+        "text": "The Budapest Memorandum on security assurances for Ukraine is signed",
         "year": 1994
     },
     {
         "id": 51,
-        "text": "Сергій Бубка встановив світовий рекорд зі стрибків із жердиною (6,14 м)",
+        "text": "Serhii Bubka sets a world record in pole vault (6.14 m)",
         "year": 1994
     },
     {
         "id": 52,
-        "text": "Оксана Баюл здобуває перше олімпійське золото незалежної України з фігурного катання на Іграх у Ліллехаммері",
+        "text": "Oksana Baiul wins independent Ukraine's first Olympic gold in figure skating at the Lillehammer Games",
         "year": 1994
     },
     {
         "id": 53,
-        "text": "Запуск першого українського супутника \"Січ-1\"",
+        "text": "Launch of the first Ukrainian satellite, \"Sich-1\"",
         "year": 1995
     },
-    { "id": 54, "text": "Ухвалено Конституцію України", "year": 1996 },
+    {
+        "id": 54,
+        "text": "The Constitution of Ukraine is adopted",
+        "year": 1996
+    },
     {
         "id": 55,
-        "text": "В обіг введено національну валюту — гривню",
+        "text": "The national currency, the hryvnia, is introduced into circulation",
         "year": 1996
     },
     {
         "id": 56,
-        "text": "Гімнастка Ліліya Подкопаєва здобуває олімпійське золото в багатоборстві на Іграх в Атланті",
+        "text": "Gymnast Lilia Podkopayeva wins Olympic gold in the individual all-around at the Atlanta Games",
         "year": 1996
     },
     {
         "id": 57,
-        "text": "Владимир Кличко здобуває олімпійське золото з боксу в супертяжкій вазі на Іграх в Атланті",
+        "text": "Volodymyr Klitschko wins Olympic gold in super heavyweight boxing at the Atlanta Games",
         "year": 1996
     },
     {
         "id": 58,
-        "text": "Руслан Пономарьов у 14 років стає наймолодшим гросмейстером у світі",
+        "text": "At age 14, Ruslan Ponomariov becomes the youngest grandmaster in the world",
         "year": 1998
     },
     {
         "id": 59,
-        "text": "Віталій Кличко здобуває свій перший титул чемпіона світу з боксу за версією WBO",
+        "text": "Vitali Klitschko wins his first world boxing championship title under the WBO",
         "year": 1999
     },
     {
         "id": 60,
-        "text": "Володимир Кличко здобуває титул чемпіона світу з боксу за версією WBO",
+        "text": "Volodymyr Klitschko wins the WBO world boxing championship title",
         "year": 2000
     },
     {
         "id": 61,
-        "text": "Плавчиня Яна Клочкова здобуває два олімпійські золота з комплексного плавання на Іграх у Сіднеї",
+        "text": "Swimmer Yana Klochkova wins two Olympic golds in individual medley swimming at the Sydney Games",
         "year": 2000
     },
     {
         "id": 62,
-        "text": "Відкриття Монумента Незалежності на Майдані Незалежності в Києві",
+        "text": "Opening of the Independence Monument on Maidan Nezalezhnosti in Kyiv",
         "year": 2001
     },
     {
         "id": 63,
-        "text": "Руслан Пономарьов стає наймолодшим чемпіоном світу з шахів за версією ФІДЕ",
+        "text": "Ruslan Ponomariov becomes the youngest FIDE world chess champion",
         "year": 2002
     },
     {
         "id": 64,
-        "text": "Руслана перемагає з піснею \"Wild Dances\" на пісенному конкурсі Євробачення",
+        "text": "Ruslana wins the Eurovision Song Contest with \"Wild Dances\"",
         "year": 2004
     },
     {
         "id": 65,
-        "text": "Збірна України вигравaє золото Всесвітньої шахової олімпіади в Кальвії",
+        "text": "Ukraine's national team wins gold at the World Chess Olympiad in Calvià",
         "year": 2004
     },
     {
         "id": 66,
-        "text": "Віталій Кличко здобуває титул чемпіона світу з боксу за версією WBC",
+        "text": "Vitali Klitschko wins the WBC world boxing championship title",
         "year": 2004
     },
     {
         "id": 67,
-        "text": "Пісенний конкурс Євробачення проведено в Києві",
+        "text": "The Eurovision Song Contest is held in Kyiv for the first time",
         "year": 2005
     },
     {
         "id": 68,
-        "text": "Збірна України вперше в історії виходить у чвертьфінал чемпіонату світу з футболу",
+        "text": "Ukraine's national football team reaches the World Cup quarterfinals for the first time in its history",
         "year": 2006
     },
     {
         "id": 69,
-        "text": "Вєрка Сердючка здобуває друге місце на Євробаченні з піснею \"Dancing Lasha Tumbai\"",
+        "text": "Verka Serduchka takes second place at Eurovision with the song \"Dancing Lasha Tumbai\"",
         "year": 2007
     },
     {
         "id": 70,
-        "text": "Володимир Кличко об'єднує титули WBO, IBF та IBO, ставши абсолютним чемпіоном світу в надважкій вазі",
+        "text": "Volodymyr Klitschko unifies the WBO, IBF, and IBO titles, becoming the undisputed heavyweight world champion",
         "year": 2008
     },
     {
         "id": 71,
-        "text": "Запуск другого українського супутника \"Січ-2\"",
+        "text": "Launch of the second Ukrainian satellite, \"Sich-2\"",
         "year": 2011
     },
     {
         "id": 72,
-        "text": "Україна разом із Польщею приймає фінальний матч чемпіонату Європи з футболу в Києві",
+        "text": "Ukraine, together with Poland, hosts the final match of the UEFA European Football Championship in Kyiv",
         "year": 2012
     },
     {
         "id": 73,
-        "text": "Прем'єра фільму Мирослава Слабошпицького \"Плем'я\" на Каннському кінофестивалі",
+        "text": "Premiere of Myroslav Slaboshpytskyi's film \"The Tribe\" at the Cannes Film Festival",
         "year": 2014
     }
 ]
